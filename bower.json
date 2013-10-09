@@ -1,0 +1,26 @@
+{
+  "name": "gaprl",
+  "version": "0.0.0",
+  "authors": [
+    "Gabriel Lopes <hello@gaprl.me>"
+  ],
+  "description": "personal website :)",
+  "main": "index.html",
+  "keywords": [
+    "gabriel",
+    "lopes"
+  ],
+  "license": "MIT",
+  "homepage": "http://gaprl.me",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "~2.1.3"
+  }
+}
