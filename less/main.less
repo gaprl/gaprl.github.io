@@ -29,12 +29,18 @@ body {
 
 	a.next {
 		position: relative;
-		top: -120px;
+		top: -80px;
 		border: 1px solid #FFF;
 		border-radius: 6px;
 		padding: 10px 20px 10px 20px;
 		color: #FFF;
 		text-decoration: none;
+		display: inline-block;
+
+		// yeah
+		-webkit-transition: all 500ms ease-in-out;
+		-moz-transition: all 500ms ease-in-out;
+		transition: all 500ms ease-in-out;
 	}
 
 	&.hey {
@@ -54,6 +60,11 @@ body {
 				font-size: 40px;
 			}
 		}
+
+		.next:hover {
+			background: rgba(255, 255, 255, 0.2);
+			-webkit-transform: rotate(3deg);
+		}
 	}
 
 	&.about {
@@ -72,6 +83,11 @@ body {
 				display: table-cell;
 				vertical-align: middle;
 				font-size: 32px;
+
+				h1 {
+					font-size: 32px;
+					display: inline-block;
+				}
 
 				span.avatar {
 					display: inline-block;
@@ -95,7 +111,11 @@ body {
 		a.next {
 			color: #333;
 			border: 1px dashed #333;
-			top: -90px;
+
+			&:hover {
+				background: rgba(000, 000, 000, 0.08);
+				top: -90px;
+			}
 		}
 	}
 
@@ -123,6 +143,8 @@ body {
 					b.hearts {
 						font-size: 18px;
 						font-weight: 100;
+						display: inline-block;
+						.online;
 					}
 				}
 			}
@@ -168,5 +190,42 @@ body {
 			color: #333;
 			border: 1px dashed #333;
 		}
+	}
+}
+
+// Heart effect
+.online {
+	-webkit-animation: online 1s ease-in-out 0s infinite alternate;
+	-moz-animation: online 1s ease-in-out 0s infinite alternate;
+	animation: online 1s ease-in-out 0s infinite alternate;
+}
+
+@-webkit-keyframes online { 
+	from {
+		-webkit-transform: scale(1);
+	}
+	to
+	{ 
+		-webkit-transform: scale(1.2);
+	}
+}
+
+@-moz-keyframes online { 
+	from {
+		-moz-transform: scale(1);
+	}
+	to
+	{ 
+		-moz-transform: scale(1.2);
+	}
+}
+
+@keyframes online { 
+	from {
+		transform: scale(1);
+	}
+	to
+	{ 
+		transform: scale(1.2);
 	}
 }
